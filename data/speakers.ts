@@ -1,0 +1,88 @@
+import { Speaker } from "@/app/speakers/page";
+
+export const speakers: Speaker[] = [
+  {
+    name: "Dr. Priya Sharma",
+    title: "Climate Change Researcher",
+    topic: "The Future of Sustainable Living",
+    bio: "Dr. Sharma is a leading climate scientist who has spent over 15 years researching sustainable solutions for urban environments. Her groundbreaking work on green architecture has influenced policy makers worldwide.",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    linkedin: "https://linkedin.com/in/priyasharma",
+    twitter: "https://twitter.com/priyasharma",
+    email: "priya@example.com",
+    website: "https://priyasharma.com",
+    talkDuration: "18 min",
+    featured: true,
+  },
+  {
+    name: "Rajesh Kumar",
+    title: "Tech Entrepreneur",
+    topic: "Building Tomorrow's Digital India",
+    bio: "Serial entrepreneur and tech visionary who has founded three successful startups. Rajesh is passionate about leveraging technology to solve India's most pressing challenges.",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    linkedin: "https://linkedin.com/in/rajeshkumar",
+    twitter: "https://twitter.com/rajeshkumar",
+    email: "rajesh@example.com",
+    website: "https://rajeshkumar.com",
+    talkDuration: "15 min",
+    featured: true,
+  },
+  {
+    name: "Meera Patel",
+    title: "Social Impact Leader",
+    topic: "Empowering Rural Communities Through Education",
+    bio: "Meera has dedicated her life to bridging the education gap in rural India. Her innovative teaching methods have transformed over 500 villages and impacted thousands of children.",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    linkedin: "https://linkedin.com/in/merapatel",
+    twitter: "https://twitter.com/merapatel",
+    email: "meera@example.com",
+    website: "https://merapatel.org",
+    talkDuration: "16 min",
+    featured: true,
+  },
+  {
+    name: "Dr. Arjun Mehta",
+    title: "Neuroscientist",
+    topic: "Unlocking the Mysteries of Human Consciousness",
+    bio: "A renowned neuroscientist whose research on brain-computer interfaces is revolutionizing our understanding of consciousness. Dr. Mehta's work bridges the gap between science and philosophy.",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    linkedin: "https://linkedin.com/in/arjunmehta",
+    twitter: "https://twitter.com/arjunmehta",
+    email: "arjun@example.com",
+    website: "https://arjunmehta.com",
+    talkDuration: "20 min",
+    featured: true,
+  },
+  {
+    name: "Kavita Singh",
+    title: "Artist & Cultural Preservationist",
+    topic: "Art as a Bridge Between Generations",
+    bio: "Kavita is a contemporary artist who uses traditional Indian art forms to tell modern stories. Her work has been exhibited globally and focuses on preserving cultural heritage.",
+    image:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
+    linkedin: "https://linkedin.com/in/kavitasingh",
+    twitter: "https://twitter.com/kavitasingh",
+    email: "kavita@example.com",
+    website: "https://kavitasingh.art",
+    talkDuration: "14 min",
+    featured: true,
+  },
+  {
+    name: "Vikram Agarwal",
+    title: "Space Technology Pioneer",
+    topic: "India's Journey to the Stars",
+    bio: "Leading aerospace engineer who has contributed to multiple space missions. Vikram's vision for accessible space technology is inspiring the next generation of Indian space entrepreneurs.",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    linkedin: "https://linkedin.com/in/vikramagarwal",
+    twitter: "https://twitter.com/vikramagarwal",
+    email: "vikram@example.com",
+    website: "https://vikramagarwal.com",
+    talkDuration: "17 min",
+    featured: true,
+  },
+];

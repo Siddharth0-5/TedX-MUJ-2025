@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="text-center">
               <h3 className="font-semibold mb-4 text-red-500">Event Details</h3>
               <div className="space-y-2 text-white">
-                <p>Novemvber 7th, 2025</p>
+                <p>8 November 2025</p>
                 <p>Manipal University Jaipur</p>
                 <p>9:00 AM - 6:00 PM</p>
               </div>

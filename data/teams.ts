@@ -50,7 +50,7 @@ export const teams = [
   {
     name: "Kamalnayan Panda",
     role: "Managing Director",
-    image: "Kamalnatan.jpg",
+    image: "Kamalnayan.jpg",
     bio: "Known for his creativity and keen eye for detail, he captures moments that tell powerful stories and inspire connection. His passion for photography and strong organizational skills help bring TEDx Manipal’s vision to life through impactful visuals and seamless teamwork.",
     linkedin: "https://www.linkedin.com/in/kamalnayanpanda/",
     twitter: "#",

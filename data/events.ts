@@ -6,7 +6,7 @@ export const events = [
     date: "November 8th, 2025 ",
     time: "9:00 AM - 6:00 PM",
     location: " Manipal University Jaipur",
-    capacity: "200+ attendees",
+    capacity: "100 attendees",
     image: "/events1.jpg",
     description:
       "Our flagship event featuring 6 inspiring speakers from diverse fields sharing ideas that matter. Experience transformative talks on military , gaming, tech and influencer.",
@@ -37,12 +37,12 @@ export const events = [
   // },
   {
     id: 3,
-    title: "Galla Dinner",
+    title: "Gala Dinner",
     subtitle: "Connect Before the Big Day",
-    date: "8 November 2025",
+    date: "7 November 2025",
     time: "8:00 PM - 10:00 PM",
     location: " Manipal University Jaipur",
-    capacity: "200 attendees",
+    capacity: "50 attendees",
     image: "/events5.jpg",
     description:
       "An exclusive networking event for  attendees to connect with fellow  speakers and organizers in a relaxed setting.",

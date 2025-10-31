@@ -5,7 +5,7 @@ export const teams = [
   {
     name: "Tanisha Mathur",
     role: "Convenor",
-    image: "/image.avif",
+    image: "public/Tanisha.jpg",
     bio: "Known for her creativity and sharp organizational skills, she ensures TEDx Manipal's vision is translated into meaningful experiences. Her attention to detail and leadership help bring diverse teams together seamlessly.",
     linkedin: "https://www.linkedin.com/in/tanisha-mathur-442658280/",
     twitter: "#",
@@ -40,7 +40,7 @@ export const teams = [
   },
   {
     name: "Sukrit Sinha",
-    role: "MD",
+    role: "Managing Director",
     image: "/image.avif",
     bio: "Famous for his innovative mindset and technical precision, he brings ideas to life through hardware and engineering excellence. His problem-solving approach and collaborative spirit ensure TEDx Manipal’s vision is powered by reliability, creativity, and cutting-edge technology.",
     linkedin: "https://www.linkedin.com/in/sukritsinha249/",
@@ -49,7 +49,7 @@ export const teams = [
   },
   {
     name: "Kamalnayan Panda",
-    role: "MD",
+    role: "Managing Director",
     image: "/image.avif",
     bio: "Known for his creativity and keen eye for detail, he captures moments that tell powerful stories and inspire connection. His passion for photography and strong organizational skills help bring TEDx Manipal’s vision to life through impactful visuals and seamless teamwork.",
     linkedin: "https://www.linkedin.com/in/kamalnayanpanda/",

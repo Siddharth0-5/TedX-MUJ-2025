@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
-import { Upload, QrCode, X, CheckCircle, Sparkles, Loader2 } from "lucide-react"
+import { Upload, CheckCircle, Sparkles, Loader2 } from "lucide-react"
 import Image from "next/image"
 import { supabase, type Registration } from "@/lib/supabase"
 import { useToast } from "@/hooks/use-toast"
 
 export default function Page() {
   const [visibleSections, setVisibleSections] = useState(new Set())
-  const [showPaymentDropdown, setShowPaymentDropdown] = useState(false)
   const [formData, setFormData] = useState({
     fullName: "",
     mobile: "",
@@ -26,7 +25,6 @@ export default function Page() {
   const [errors, setErrors] = useState<Record<string, string>>({})
   const { toast } = useToast()
   const heroRef = useRef<HTMLElement>(null)
-  const dropdownRef = useRef<HTMLDivElement>(null)
 
   // useEffect(() => {
   //   const handleMouseMove = (e: MouseEvent) => {
@@ -56,17 +54,6 @@ export default function Page() {
     sections.forEach((section) => observer.observe(section))
 
     return () => observer.disconnect()
-  }, [])
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setShowPaymentDropdown(false)
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
   const isVisible = (id: string) => visibleSections.has(id)
@@ -425,76 +412,18 @@ export default function Page() {
                     {errors.registrationNumber && <p className="text-red-400 text-sm">{errors.registrationNumber}</p>}
                   </div>
 
-                  {/* Payment Button with Dropdown */}
-                  <div className="relative" ref={dropdownRef}>
+                  {/* Payment Button (now redirects directly to payment link) */}
+                  <div className="relative">
                     <Button
                       type="button"
-                      onClick={() =>
-                        setShowPaymentDropdown(!showPaymentDropdown)
-                      }
+                      onClick={() => {
+                        // redirect to Razorpay checkout
+                        window.location.href = "https://rzp.io/rzp/UyNYHNG"
+                      }}
                       className="w-full bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-red-500/25"
                     >
                       Click Here to Pay
                     </Button>
-
-                    {/* Payment Dropdown */}
-                    {showPaymentDropdown && (
-                      <div className="fixed inset-x-4 md:inset-x-auto md:left-1/2 md:-translate-x-1/2 top-1/2 -translate-y-1/2 md:max-w-md w-auto bg-gray-900/95 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 z-50 animate-in slide-in-from-top-2 duration-300 max-h-[90vh] overflow-y-auto">
-                        <div className="flex justify-between items-center mb-4">
-                          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                            <QrCode className="w-5 h-5 text-red-500" />
-                            Payment Instructions
-                          </h3>
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="sm"
-                            onClick={() => setShowPaymentDropdown(false)}
-                            className="text-white "
-                          >
-                            <X className="w-4 h-4" />
-                          </Button>
-                        </div>
-
-                        <div className="flex flex-col items-center space-y-4">
-                          {/* Real QR Code */}
-                          <div className="w-64 h-64 bg-white rounded-lg flex items-center justify-center p-2">
-                            <Image
-                              src="/QR.jpg"
-                              alt="Payment QR Code"
-                              width={240}
-                              height={240}
-                              className="w-full h-full object-contain"
-                            />
-                          </div>
-
-                          <div className="text-center space-y-2">
-                            <p className="text-white font-medium">
-                              Scan QR Code to Pay
-                            </p>
-                            <p className="text-white text-sm">Amount: ₹800</p>
-                            <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-3 mt-4">
-                              <p className="text-red-500 text-sm font-medium mb-2">
-                                Instructions:
-                              </p>
-                              <ol className="text-white text-xs space-y-1 text-left">
-                                <li>
-                                  1. Scan the QR code with your payment app
-                                </li>
-                                <li>2. Complete the payment of ₹800</li>
-                                <li>
-                                  3. Take a screenshot of the payment
-                                  confirmation
-                                </li>
-                                <li>
-                                  4. Upload the screenshot in the form below
-                                </li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </div>
 
                   {/* Upload Payment Proof */}

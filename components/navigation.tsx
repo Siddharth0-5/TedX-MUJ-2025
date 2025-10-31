@@ -175,11 +175,10 @@ export default function Navigation() {
                       <div className="text-red-500 font-bold text-lg">
                         Nov 7 2025
                       </div>
-                      <div className="text-white text-xs">2024</div>
                     </div>
                     <div className="w-px h-8 bg-white/20"></div>
                     <div className="text-center">
-                      <div className="text-red-500 font-bold text-lg">500+</div>
+                      <div className="text-red-500 font-bold text-lg">100</div>
                       <div className="text-white text-xs">Attendees</div>
                     </div>
                     <div className="w-px h-8 bg-white/20"></div>

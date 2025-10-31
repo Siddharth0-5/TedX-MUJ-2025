@@ -11,7 +11,7 @@ export default function TeamPage() {
   const [mounted, setMounted] = useState(false);
 
   const convenors = teams.filter((member) => member.role === "Convenor");
-  const md = teams.filter((member) => member.role === "MD");
+  const md = teams.filter((member) => member.role === "Managing Director");
 
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -5,7 +5,7 @@ export const teams = [
   {
     name: "Tanisha Mathur",
     role: "Convenor",
-    image: "public/Tanisha.jpg",
+    image: "/Tanisha.jpg",
     bio: "Known for her creativity and sharp organizational skills, she ensures TEDx Manipal's vision is translated into meaningful experiences. Her attention to detail and leadership help bring diverse teams together seamlessly.",
     linkedin: "https://www.linkedin.com/in/tanisha-mathur-442658280/",
     twitter: "#",

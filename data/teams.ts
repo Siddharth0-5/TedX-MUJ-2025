@@ -6,7 +6,6 @@ export const teams = [
     name: "Tanisha Mathur",
     role: "Convenor",
     image: "/Tanisha.jpg",
-    focalY: "10%", // nudges the image focus higher so head isn't cropped
     bio: "Known for her creativity and sharp organizational skills, she ensures TEDx Manipal's vision is translated into meaningful experiences. Her attention to detail and leadership help bring diverse teams together seamlessly.",
     linkedin: "https://www.linkedin.com/in/tanisha-mathur-442658280/",
     twitter: "#",

@@ -1,3 +1,5 @@
+// Commented out theme provider temporarily
+/*
 'use client'
 
 import * as React from 'react'
@@ -9,3 +11,4 @@ import {
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>
 }
+*/

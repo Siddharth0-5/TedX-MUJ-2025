@@ -1,48 +1,60 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Calendar, Clock, MapPin, Users, ArrowRight, Mic, Coffee, Camera, Sparkles } from "lucide-react"
-import { events } from "@/data/events"
-
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  ArrowRight,
+  Mic,
+  Coffee,
+  Camera,
+  Sparkles,
+} from "lucide-react";
+import { events } from "@/data/events";
 
 type EventType = "main" | "rehearsal" | "networking" | "community";
 
-const eventIcons: Record<EventType, React.ComponentType<{ className?: string }>> = {
+const eventIcons: Record<
+  EventType,
+  React.ComponentType<{ className?: string }>
+> = {
   main: Mic,
   rehearsal: Camera,
   networking: Users,
   community: Coffee,
-}
+};
 
 export default function EventsPage() {
-  const [visibleSections, setVisibleSections] = useState(new Set())
-  const heroRef = useRef<HTMLElement>(null)
+  const [visibleSections, setVisibleSections] = useState(new Set());
+  const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleSections((prev) => new Set(prev).add(entry.target.id))
+            setVisibleSections((prev) => new Set(prev).add(entry.target.id));
           }
-        })
+        });
       },
-      { threshold: 0.1, rootMargin: "-50px" },
-    )
+      { threshold: 0.1, rootMargin: "-50px" }
+    );
 
-    const sections = document.querySelectorAll("[data-section]")
-    sections.forEach((section) => observer.observe(section))
+    const sections = document.querySelectorAll("[data-section]");
+    sections.forEach((section) => observer.observe(section));
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
-  const isVisible = (id: string) => visibleSections.has(id)
+  const isVisible = (id: string) => visibleSections.has(id);
 
-  const featuredEvent = events.find((event) => event.featured)
-  const otherEvents = events.filter((event) => !event.featured)
+  const featuredEvent = events.find((event) => event.featured);
+  const otherEvents = events.filter((event) => !event.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-black to-gray-900 text-white overflow-x-hidden">
@@ -266,35 +278,37 @@ export default function EventsPage() {
               <div className="flex items-center justify-center gap-4 mb-6 relative">
                 <div className="w-12 h-px bg-gradient-to-r from-transparent to-red-500" />
                 <h2 className="text-4xl md:text-5xl font-bold text-white relative">
-                  Supporting Event
+                  Supporting Events
                   <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-red-500/50 via-red-500 to-red-500/50" />
                 </h2>
                 <div className="w-12 h-px bg-gradient-to-l from-transparent to-red-500" />
               </div>
             </div>
 
-            <div className="flex justify-center max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
               {otherEvents.map((event, index) => (
                 <div
                   key={event.id}
                   className={`group transition-all duration-700 delay-${
-                    index * 100
+                    index * 200
                   } ${
                     isVisible("other-events")
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-8"
                   }`}
                 >
-                  <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 overflow-hidden h-full flex flex-col max-w-md w-full">
+                  <div
+                    className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 overflow-hidden h-full
+ flex flex-col w-full max-w-md md:max-w-lg"
+                  >
                     {/* Event Image */}
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden w-full h-96">
                       <Image
                         src={event.image || "/singer.avif"}
-                        // src={"/singer.avif"}
                         alt={event.title}
-                        width={350}
-                        height={450}
-                        className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                        width={400}
+                        height={250}
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>

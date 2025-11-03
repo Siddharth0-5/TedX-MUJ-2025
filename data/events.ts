@@ -19,7 +19,7 @@ export const events = [
     featured: true,
   },
   // {
-  //   id: 2,
+  //   id: 4,
   //   title: "Speaker Rehearsal Day",
   //   subtitle: "Behind the Scenes Preparation",
   //   date: "8 November 2025",
@@ -50,24 +50,19 @@ export const events = [
     status: "upcoming",
     featured: false,
   },
-  // {
-  //   id: 4,
-  //   title: "Post-Event Community Gathering",
-  //   subtitle: "Continuing the Conversation",
-  //   date: "March 16, 2024",
-  //   time: "4:00 PM - 6:00 PM",
-  //   location: "Campus Café, Manipal University Jaipur",
-  //   capacity: "Open to all",
-  //   image: "/placeholder.svg?height=400&width=600",
-  //   description:
-  //     "A casual gathering to reflect on the event, share insights, and build lasting connections within our TEDx community.",
-  //   highlights: [
-  //     "Inspiring Speakers",
-  //     "Live Performances",
-  //     "Interactive Networking Sessions",
-  //     "Innovation Showcase",
-  //   ],
-  //   status: "upcoming",
-  //   featured: false,
-  // },
+  {
+    id: 4,
+    title: "Speaker Reveal Event",
+    subtitle: "Starting the Conversation",
+    date: "November 4, 2025",
+    time: "7 PM",
+    location: "TedX Chowk ,GHS, Manipal University Jaipur",
+    capacity: "Open to all",
+    image: "/events6.jpg",
+    description:
+      " Join us for the Speakers Reveal as we unveil bold voices and stories of courage, creativity, and curiosity.",
+    highlights: [ "Speakers Reveal"],
+    status: "upcoming",
+    featured: false,
+  },
 ];

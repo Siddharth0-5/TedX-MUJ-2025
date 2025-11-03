@@ -268,7 +268,64 @@ export default function Page() {
               </div>
 
               {/* Know Your Speaker Section */}
-             
+              <div
+                data-section
+                id="know-speaker-section"
+                className={`transition-all duration-1000 ${
+                  isVisible("know-speaker-section")
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-12"
+                }`}
+              >
+                <div className="text-center mb-8 relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/5 to-transparent blur-xl" />
+                  <div className="flex items-center justify-center gap-4 mb-6 relative">
+                    <div className="w-16 h-px bg-gradient-to-r from-transparent to-red-500" />
+                    <h2 className="text-3xl md:text-4xl font-bold text-white relative">
+                      Want to Know More?
+                      <div className="absolute -bottom-2 left-0 right-0 h-px bg-gradient-to-r from-red-500/50 via-red-500 to-red-500/50" />
+                    </h2>
+                    <div className="w-16 h-px bg-gradient-to-l from-transparent to-red-500" />
+                  </div>
+                  <p className="text-white text-lg max-w-2xl mx-auto mb-8">
+                    Get personalized insights about our speakers, their
+                    expertise, and what makes their talks extraordinary
+                  </p>
+
+                  {/* Know Your Speaker Button */}
+                  <button
+                    onClick={() => setShowChatbot(!showChatbot)}
+                    className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-full hover:from-red-700 hover:to-red-800 transition-all duration-300 hover:scale-105 shadow-2xl border-2 border-red-500/30 overflow-hidden"
+                  >
+                    {/* Button Background Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    <div className="relative flex items-center gap-3">
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2v-6a2 2 0 012-2h8z"
+                        />
+                      </svg>
+                      <span className="font-semibold text-lg">
+                        {showChatbot
+                          ? "Close Speaker Chat"
+                          : "Know Your Speaker"}
+                      </span>
+                    </div>
+
+                    {/* Pulse effect */}
+                    <div className="absolute inset-0 rounded-full animate-pulse bg-red-500/20 opacity-30" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>

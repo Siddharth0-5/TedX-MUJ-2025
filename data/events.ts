@@ -2,7 +2,7 @@ export const events = [
   {
     id: 1,
     title: "Main TEDx Event",
-    subtitle: "Parallax: Exploring Convergent Perspectives",
+    subtitle: "Convergent Perspectives",
     date: "November 8th, 2025 ",
     time: "9:00 AM - 6:00 PM",
     location: " Manipal University Jaipur",

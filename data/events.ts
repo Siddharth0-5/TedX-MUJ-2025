@@ -52,7 +52,7 @@ export const events = [
   },
   {
     id: 4,
-    title: "Speaker Reveal Event",
+    title: "Theme Reveal Event",
     subtitle: "Starting the Conversation",
     date: "November 4, 2025",
     time: "7 PM",
@@ -60,8 +60,8 @@ export const events = [
     capacity: "Open to all",
     image: "/events6.jpg",
     description:
-      " Join us for the Speakers Reveal as we unveil bold voices and stories of courage, creativity, and curiosity.",
-    highlights: [ "Speakers Reveal"],
+      " Join us for the Theme Reveal as we unveil bold voices and stories of courage, creativity, and curiosity.",
+    highlights: ["Theme Reveal"],
     status: "upcoming",
     featured: false,
   },

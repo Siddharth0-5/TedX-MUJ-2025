@@ -58,7 +58,7 @@ export const events = [
     time: "7 PM",
     location: "TedX Chowk ,GHS, Manipal University Jaipur",
     capacity: "Open to all",
-    image: "/events6.jpg",
+    image: "/event7.jpg",
     description:
       " Join us for the Theme Reveal as we unveil bold voices and stories of courage, creativity, and curiosity.",
     highlights: ["Theme Reveal"],

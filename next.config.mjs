@@ -9,9 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  server: {
-    https: true,
-  },
 }
 
 export default nextConfig

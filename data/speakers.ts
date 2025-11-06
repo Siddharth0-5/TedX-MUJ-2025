@@ -21,7 +21,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: "Neeraj Gaba",
-    topic: "Influencer",
+    topic: "Creative Entrepreneur",
     bio: "A safe space ally, creative entrepreneur and motivational speaker, Neeraj Gaba is best known as the charismatic mentor and jury member on India’s Next Top Model and Shaadi Fit, as well as a driving creative force behind Lakmé Fashion Week and FDCI Men’s Fashion Weekend. Through his initiative The Safe Space and multiple TEDx talks, he redefines safety as a universal need beyond food, clothing, and shelter. A mentor, director, and producer, Neeraj empowers youth across fashion, corporate, and entertainment spaces to live authentically. In tune with our theme “Parallax,” he challenges us to transcend conventional viewpoints, to align how we are seen with who we truly are. ",
     image:"/gaba.jpeg",
     instagram: "https://www.instagram.com/iamneerajgaba?igsh=bTlrNGVubHhhdGhw",

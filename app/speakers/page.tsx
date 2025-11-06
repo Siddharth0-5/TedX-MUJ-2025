@@ -444,14 +444,12 @@ export default function Page() {
 
               <h1 className="relative text-7xl md:text-8xl lg:text-9xl font-black leading-none mb-6">
                 <span className="block bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                  PARALLAX
+                  OUR
+                </span>
+                <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent transform -translate-y-4">
+                  SPEAKERS
                 </span>
               </h1>
-
-              {/* Theme section - commented out */}
-              {/* <div className="text-red-500 text-xl md:text-2xl tracking-wide font-medium">
-                THEME 2025
-              </div> */}
 
               {/* Decorative Elements */}
               <div className="absolute -top-8 -left-8 w-16 h-16 border-l-4 border-t-4 border-red-500/50 opacity-60 hidden md:block" />
@@ -461,7 +459,9 @@ export default function Page() {
             {/* Subtitle with TEDx Philosophy */}
             <div className="relative mb-12">
               <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed">
-                Where a change in angle reveals infinite possibilities. In a world defined by speed and complexity, Parallax challenges us to reframe what we know. It's about bending perspectives, questioning absolutes, and finding clarity in motion.
+                Join us for an extraordinary journey through innovation,
+                creativity, and transformative thinking that will challenge
+                perspectives and inspire action.
               </p>
             </div>
           </div>

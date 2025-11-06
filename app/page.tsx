@@ -362,7 +362,7 @@ export default function HomePage() {
       </section>
 
       {/* Theme Section */}
-      {/* <section ref={themeRef} id="theme" className="py-32 relative">
+      <section ref={themeRef} id="theme" className="py-32 relative">
         <div className="container mx-auto px-6">
           <div
             className={`max-w-6xl mx-auto text-center transition-all duration-1500 delay-200 ${
@@ -409,7 +409,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* About TED Section */}
       <section ref={tedRef} id="ted" className="py-32 relative">

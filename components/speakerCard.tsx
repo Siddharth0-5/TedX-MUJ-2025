@@ -31,7 +31,7 @@ export function SpeakerCard({
           {/* Speaker Image */}
           <div
             className={`relative ${
-              isFeatured ? "h-96" : "h-80"
+              isFeatured ? "h-[32rem]" : "h-80"
             } overflow-hidden`}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent z-10" />
@@ -40,7 +40,7 @@ export function SpeakerCard({
               alt={speaker.name}
               width={400}
               height={400}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-cover object-[center_85%] transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
